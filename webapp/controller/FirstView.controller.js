@@ -103,5 +103,10 @@ sap.ui.define([
 				this.getView().getModel("oLocalModel").setProperty("/confirmPassword", "");
 				this.getView().getModel("oLocalModel").setProperty("/Telephone", "");*/
 	};
+	Controller.prototype.fnRowSelected = function(oEvent) {
+		var sPath = oEvent.getParameter("rowContext").getPath();
+		var idGridLayout = this.getView().byId("idGridLayout");
+		idGridLayout.bindElement({path: sPath, model: "oGridTableModel"});
+	};
 	return Controller;
 });
