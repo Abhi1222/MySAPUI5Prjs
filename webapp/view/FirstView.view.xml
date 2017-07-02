@@ -1,0 +1,94 @@
+<mvc:View controllerName="abhiMyFirstDemo.controller.FirstView" xmlns:html="http://www.w3.org/1999/xhtml" displayBlock="true"
+	xmlns="sap.ui.table" xmlns:mvc="sap.ui.core.mvc" xmlns:u="sap.ui.unified" xmlns:c="sap.ui.core" xmlns:m="sap.m">
+	<m:App>
+		<m:pages>
+			<m:Page title="Testing">
+				<m:content>
+					<!--					<Label text="First Name" required="{oTestModel>/isMandatory}" design="Bold" class="myTestCSS"/>
+					<Input id="idFirstName" type="Text" placeholder="Enter Text ..." textDirection="LTR" required="{oTestModel>/isMandatory}"
+						value="{oComboBoxModel>}"/>
+					<Label text="Last Name" required="{oTestModel>/isMandatory}" design="Bold"/>
+					<Input id="idLastName" type="Text" placeholder="Enter Text ..." value="{oLocalModel>/lastName}"/>
+					<Label text="Password" required="{oTestModel>/isMandatory}" design="Bold"/>
+					<Input id="passwordInput" type="Password" placeholder="Enter password ..." value="{oLocalModel>/Password}"/>
+					<Label text="Confirm Password" required="{oTestModel>/isMandatory}" design="Bold"/>
+					<Input id="idConfPassword" type="Password" placeholder="Confirm Your password ..." value="{oLocalModel>/confirmPassword}"/>
+					<Label text="Email" required="true" design="Bold"/>
+					<Input id="idEmail" type="Email" placeholder="Enter Email ..." value="{oLocalModel>/Email}"/>
+					<Label text="Confirm Email" required="{oTestModel>/isMandatory}" design="Bold"/>
+					<Input id="idCEmail" type="Email" placeholder="Confirm Your Email ..." value="{oLocalModel>/ConfirmEmail}"/>
+					<Label text="Telephone" required="{oTestModel>/isMandatory}" design="Bold"/>
+					<Input id="idTelephone" type="Tel" placeholder="Enter Telephone Number ..." value="{oLocalModel>/Telephone}"/>
+					<Label text="Date of Birth" required="{oTestModel>/isMandatory}"/>
+					<DatePicker/>
+					<Text text="Gender" textAlign="Center"/>
+					<RadioButtonGroup width="100%">
+						<buttons>
+							<RadioButton text="Male"/>
+							<RadioButton text="Female"/>
+						</buttons>
+					</RadioButtonGroup>
+					<Text text="Movies" width="100%"/>
+					<Select items="{oSelectBoxModel>/results}">
+						<core:Item key="{oSelectBoxModel>key}" text="{oSelectBoxModel>text}"/>
+					</Select>
+					<Label text="Sports" required="true" width="100%"/>
+					<ComboBox items="{oComboBoxModel>/results}">
+						<core:Item key="{oComboBoxModel>key}" text="{oComboBoxModel>text}"/>
+					</ComboBox>
+					<Text text="Education" width="100%"/>
+					<CheckBox text="10nth"/>
+					<CheckBox text="Intermediate"/>
+					<CheckBox text="Graduation"/>
+					<CheckBox text="Post Graduation"/>
+					<Text text="GPA" width="100%"/>
+					<RangeSlider range="0,100" min="0" max="10" inputsAsTooltips="true" width="400px"/>-->
+					<m:Label text="Selection Mode" labelFor="select1"/>
+					<m:Select id="select1" width="100%" items="{selectionmodel>/selectionitems}" selectedKey="MultiToggle" change="onSelectionModeChange">
+						<c:Item key="{selectionmodel>key}" text="{selectionmodel>text}"/>
+					</m:Select>
+					<m:Label text="Selection Behavior" labelFor="select2"/>
+					<m:Select id="select2" width="100%" items="{selectionmodel>/behavioritems}" selectedKey="RowSelector" change="onBehaviourModeChange">
+						<c:Item key="{selectionmodel>key}" text="{selectionmodel>text}"/>
+					</m:Select>
+					<Table rows="{oGridTableModel>/ProductCollection}" title="Products" selectionMode="MultiToggle" visibleRowCount="7">
+						<columns>
+							<Column width="15rem" hAlign="Center">
+								<m:Label text="Product"/>
+								<template>
+									<m:Text text="{oGridTableModel>Name}"/>
+								</template>
+							</Column>
+							<Column width="15rem" hAlign="Center">
+								<m:Label text="Supplier"/>
+								<template>
+									<m:Input value="{oGridTableModel>ProductId}"/>
+								</template>
+							</Column>
+							<Column width="15rem" hAlign="Center">
+								<m:Label text="Dimensions"/>
+								<template>
+									<m:Label text="{oGridTableModel>Quantity}"/>
+								</template>
+							</Column>
+							<Column width="15rem" hAlign="Center">
+								<m:Label text="Weight"/>
+								<template>
+									<m:ObjectStatus text="{oGridTableModel>Status}"/>
+								</template>
+							</Column>
+							<Column width="15rem" hAlign="Center">
+								<m:Label text="Price"/>
+								<template>
+									<u:Currency value="{oGridTableModel>Price}" currency="{oGridTableModel>CurrencyCode}"/>
+								</template>
+							</Column>
+						</columns>
+					</Table>
+					<m:Button type="Accept" text="Submit" press=".fMySubmitPress" width="100%"></m:Button>
+					<m:Button type="Accept" text="Reset" press=".fMyResetPress" width="100%"></m:Button>
+				</m:content>
+			</m:Page>
+		</m:pages>
+	</m:App>
+</mvc:View>
