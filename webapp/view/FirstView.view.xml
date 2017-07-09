@@ -1,56 +1,52 @@
-<mvc:View controllerName="abhiMyFirstDemo.controller.FirstView" xmlns:html="http://www.w3.org/1999/xhtml" displayBlock="true"
-	xmlns="sap.ui.table" xmlns:mvc="sap.ui.core.mvc" xmlns:u="sap.ui.unified" xmlns:c="sap.ui.core" xmlns:m="sap.m" xmlns:l="sap.ui.layout">
-	<m:App>
-		<m:pages>
-			<m:Page title="Testing">
-				<m:content>
-					<Table rows="{oGridTableModel>/ProductCollection}" title="Products" selectionMode="MultiToggle" visibleRowCount="7"
-						rowSelectionChange=".fnRowSelected">
+<mvc:View controllerName="abhiMyFirstDemo.controller.FirstView" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.core" xmlns:m="sap.m" xmlns:l="sap.ui.layout" xmlns="sap.ui.table" height="100%">
+	<Table rows="{oGridTableModel>/value}" title="Products" selectionMode="MultiToggle" rowSelectionChange=".fnRowSelected">
 						<columns>
 							<Column width="15rem" hAlign="Center">
-								<m:Label text="Product"/>
+								<m:Label text="OrderID"/>
 								<template>
-									<m:Text text="{oGridTableModel>Name}"/>
+									<m:Text text="{oGridTableModel>OrderID}"/>
 								</template>
 							</Column>
 							<Column width="15rem" hAlign="Center">
-								<m:Label text="Supplier"/>
+								<m:Label text="CustomerID"/>
 								<template>
-									<m:Input value="{oGridTableModel>ProductId}"/>
+									<m:Label text="{oGridTableModel>CustomerID}"/>
 								</template>
 							</Column>
 							<Column width="15rem" hAlign="Center">
-								<m:Label text="Dimensions"/>
+								<m:Label text="Employee Id"/>
 								<template>
-									<m:Label text="{oGridTableModel>Quantity}"/>
+									<m:Label text="{oGridTableModel>EmployeeID}"/>
 								</template>
 							</Column>
 							<Column width="15rem" hAlign="Center">
-								<m:Label text="Weight"/>
+								<m:Label text="Route"/>
 								<template>
-									<m:ObjectStatus text="{oGridTableModel>Status}"/>
+									<m:ObjectStatus text="{oGridTableModel>ShipVia}"/>
 								</template>
 							</Column>
 							<Column width="15rem" hAlign="Center">
-								<m:Label text="Price"/>
+								<m:Label text="PostCode"/>
 								<template>
-									<u:Currency value="{oGridTableModel>Price}" currency="{oGridTableModel>CurrencyCode}"/>
+									<m:Label text="{oGridTableModel>ShipPostalCode}"/>
 								</template>
 							</Column>
 						</columns>
 					</Table>
-					<l:Grid class="sapUiSmallMarginTop" hSpacing="2" defaultSpan="L6 M6 S10" id="idGridLayout">
+	<l:Grid class="sapUiSmallMarginTop" hSpacing="2" defaultSpan="L6 M6 S10" id="idGridLayout">
 						<l:content>
-							<m:Input value="{oGridTableModel>Name}" />
-							<m:Input value="{oGridTableModel>DimUnit}" />
-							<m:Input value="{oGridTableModel>Status}" />
-							<m:Input value="{oGridTableModel>Name}" /><m:Input value="{oGridTableModel>Name}" /><m:Input value="{oGridTableModel>Name}" /><m:Input value="{oGridTableModel>Name}" /><m:Input value="{oGridTableModel>Name}" /><m:Input value="{oGridTableModel>Name}" /><m:Input value="{oGridTableModel>Name}" />
-							</l:content>
+							<m:Input value="{oGridTableModel>CustomerID}"/>
+							<m:Input value="{oGridTableModel>CompanyName}"/>
+							<m:Input value="{oGridTableModel>ContactName}"/>
+							<m:Input value="{oGridTableModel>ContactTitle}"/>
+							<m:Input value="{oGridTableModel>Address}"/>
+							<m:Input value="{oGridTableModel>City}"/>
+							<m:Input value="{oGridTableModel>Region}"/>
+							<m:Input value="{oGridTableModel>PostalCode}"/>
+							<m:Input value="{oGridTableModel>Country}"/>
+							<m:Input value="{oGridTableModel>Phone}"/>
+							<m:Input value="{oGridTableModel>Fax}"/>
+						</l:content>
 					</l:Grid>
-					<m:Button type="Accept" text="Submit" press=".fMySubmitPress" width="100%"></m:Button>
-					<m:Button type="Accept" text="Reset" press=".fMyResetPress" width="100%"></m:Button>
-				</m:content>
-			</m:Page>
-		</m:pages>
-	</m:App>
 </mvc:View>
